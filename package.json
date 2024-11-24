@@ -1,0 +1,68 @@
+{
+  "name": "lolkitten",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "The rainbow I tasted.",
+  "author": "Vincent-the-gamer",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "bin": {
+    "lolkitten": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "tsx test/cli.test.ts",
+    "build": "tsup",
+    "dep": "taze major",
+    "npm:login": "pnpm login --registry https://registry.npmjs.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Vincent-the-gamer/lolkitten#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent-the-gamer/lolkitten.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vincent-the-gamer/lolkitten/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com",
+    "access": "public"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "taze": "^0.18.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "ansi": "^0.3.1",
+    "chalk": "^5.3.0",
+    "line-by-line": "^0.1.6",
+    "minimist": "^1.2.8",
+    "supports-color": "7.1.0"
+  },
+  "optionalDependencies": {
+    "sleep": "^6.3.0"
+  }
+}
