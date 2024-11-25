@@ -6,14 +6,22 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-> [!NOTE]
-> Not released yet!
-
 The Skittles I tasted. :) 
 
 Inspired by [busyloop/lolcat](https://github.com/busyloop/lolcat)
 
 ![skittles](.github/skittles.jpg)
+
+## Installation
+
+### npm
+
+```shell
+npm i lolkitten -g
+```
+
+### jsr
+Soon.
 
 ## Preview
 

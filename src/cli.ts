@@ -46,7 +46,6 @@ With no FILE, or when FILE is -, read standard input.
 Examples:
   lolkitten f - g     Output f's contents, then stdin, then, g's contents.
   lolkitten           Copy standard input to standard output.
-  fortune | lolkitten Display a rainbow cookie.
 
 Report lolkitten bugs to <https://github.com/Vincent-the-gamer/lolkitten/issues>
 lolkitten home page: <https://github.com/Vincent-the-gamer/lolkitten/>`;
