@@ -1,8 +1,8 @@
 {
   "name": "@vincent-the-gamer/lolkitten",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
-  "description": "The rainbow I tasted.",
+  "description": "The Skittles I tasted.",
   "author": "Vincent-the-gamer",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

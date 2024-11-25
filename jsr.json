@@ -1,8 +1,8 @@
 {
     "name": "@vince-g/lolkitten",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "license": "MIT",
-    "exports": "./src/cli.ts",
+    "exports": "./src/index.ts",
     "publish": {
         "include": [
             "LICENSE",
