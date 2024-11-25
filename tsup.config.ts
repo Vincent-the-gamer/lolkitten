@@ -2,13 +2,13 @@ import type { Options } from 'tsup'
 
 export default <Options> {
   entryPoints: [
-    "./src/cli.ts",
-    "./src/index.ts"
+    "./src/{cli,index}.ts",
   ],
   clean: true,
+  platform: "node",
   format: ['esm'],
   dts: true,
-  minify: false,
-  // compatible with __dirname in cjs and import.meta.url in mjs.
-  shims: true
+  onSuccess() {
+    console.info("🙏 Build succeeded!")
+  }
 }

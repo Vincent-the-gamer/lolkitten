@@ -4,7 +4,7 @@
   "type": "module",
   "description": "The rainbow I tasted.",
   "author": "Vincent-the-gamer",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -12,16 +12,14 @@
     "*.d.ts"
   ],
   "bin": {
-    "lolkitten": "./dist/cli.js"
+    "lolkitten": "./bin/lolkitten.js"
   },
   "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
   },
   "includes": [
+    "bin",
     "dist",
     "README.md",
     "package.json",
@@ -29,15 +27,18 @@
   ],
   "typesVersions": {
     "*": {
-      ".": [
-        "./dist/index.d.ts"
+      "*": [
+        "./dist/*",
+        "./*"
       ]
     }
   },
   "scripts": {
-    "test": "tsx test/cli.test.ts",
+    "test": "tsx test/index.test.ts",
+    "cli": "tsx src/cli.ts",
     "build": "tsup",
     "dep": "taze major",
+    "lint:fix": "eslint src --fix",
     "npm:login": "pnpm login --registry https://registry.npmjs.com",
     "npm:publish": "pnpm publish --registry https://registry.npmjs.com",
     "jsr:prepublish": "jsr publish --dry-run --allow-slow-types --allow-dirty",
@@ -58,7 +59,10 @@
   },
   "sideEffects": false,
   "devDependencies": {
+    "@antfu/eslint-config": "^3.9.2",
+    "@swc/core": "^1.9.3",
     "@types/node": "^22.9.3",
+    "eslint": "^9.15.0",
     "jsr": "^0.13.2",
     "taze": "^0.18.0",
     "tsup": "^8.3.5",
