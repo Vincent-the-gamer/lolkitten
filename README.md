@@ -16,21 +16,20 @@ Inspired by [busyloop/lolcat](https://github.com/busyloop/lolcat)
 
 ### From `npm`
 
-
 ```shell
 npm i @vincent-the-gamer/lolkitten -g
 ```
 
-### Usage
+### From `jsr`
+Soon.
+
+## Usage
 ```shell
 lolkitten -h
 
 # Or through pipe
 neofetch | lolkitten
 ```
-
-### From `jsr`
-Soon.
 
 ## Preview
 
