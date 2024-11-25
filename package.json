@@ -34,7 +34,7 @@
     "dep": "taze major",
     "npm:login": "pnpm login --registry https://registry.npmjs.com",
     "npm:publish": "pnpm publish --registry https://registry.npmjs.com",
-    "jsr:prepublish": "jsr publish --dry-run --allow-slow-types",
+    "jsr:prepublish": "jsr publish --dry-run --allow-slow-types --allow-dirty",
     "jsr:publish": "jsr publish --allow-slow-types"
   },
   "license": "MIT",
