@@ -32,7 +32,8 @@
     "test": "tsx test/cli.test.ts",
     "build": "tsup",
     "dep": "taze major",
-    "npm:login": "pnpm login --registry https://registry.npmjs.com"
+    "npm:login": "pnpm login --registry https://registry.npmjs.com",
+    "npm:publish": "pnpm publish --registry https://registry.npmjs.com"
   },
   "license": "MIT",
   "homepage": "https://github.com/Vincent-the-gamer/lolkitten#readme",
