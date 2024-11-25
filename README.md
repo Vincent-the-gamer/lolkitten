@@ -17,7 +17,7 @@ npm i @vincent-the-gamer/lolkitten -g
 ```
 
 ### From `jsr`
-Soon.
+Soon. Trying to release a CLI package.
 
 ## Usage
 ```shell
