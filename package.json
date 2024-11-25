@@ -1,12 +1,12 @@
 {
   "name": "@vincent-the-gamer/lolkitten",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "The rainbow I tasted.",
   "author": "Vincent-the-gamer",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "*.d.ts"
@@ -21,6 +21,12 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "includes": [
+    "dist",
+    "README.md",
+    "package.json",
+    "LICENSE"
+  ],
   "typesVersions": {
     "*": {
       ".": [

@@ -69,7 +69,7 @@ function version() {
         options.seed = rand(256);
     }
 
-    println('lolkitten ' + info.version + ' (c) 2015-2023 Robert Marsal');
+    println('lolkitten ' + info.version + ' (c) 2024-PRESENT Vincent-the-gamer');
 
     process.exit();
 }
