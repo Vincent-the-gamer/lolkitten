@@ -16,11 +16,17 @@ Inspired by [busyloop/lolcat](https://github.com/busyloop/lolcat)
 
 ### From `npm`
 
-> [!NOTE]
-> Waiting for release.
 
 ```shell
-npm i lolkitten -g
+npm i @vincent-the-gamer/lolkitten -g
+```
+
+### Usage
+```shell
+lolkitten -h
+
+# Or through pipe
+neofetch | lolkitten
 ```
 
 ### From `jsr`
@@ -37,13 +43,22 @@ Soon.
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/lolkitten?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/lolkitten
-[npm-downloads-src]: https://img.shields.io/npm/dm/lolkitten?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/lolkitten
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/lolkitten?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=lolkitten
-[license-src]: https://img.shields.io/github/license/Vincent-the-gamer/lolkitten.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/Vincent-the-gamer/lolkitten/blob/main/LICENSE
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-href]: https://npmjs.com/package/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten
+[npm-downloads-src]: https://img.shields.io/npm/dm/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-href]: https://npmjs.com/package/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten?style=flat&colorA=080f12&colorB=1fa669&label=minzip
+[bundle-href]: https://bundlephobia.com/result?p=
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten
+[license-src]: https://img.shields.io/github/license/Vincent-the-gamer/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/Vincent-the-gamer/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/lolkitten
+[jsdocs-href]: https://www.jsdocs.io/package/
+[npm-version-src]: https://img.shields.io/npm/v/@vincent-the-gamer/lolkitten
