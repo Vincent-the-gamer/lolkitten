@@ -1,4 +1,4 @@
-import { options, println, init, fromPipe, fromFile, fromString } from "."
+import { options, println, init, fromPipe, fromFile } from "."
 import info from "../package.json"
 import chalk from "chalk"
 // @ts-expect-error missing types

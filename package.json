@@ -33,7 +33,9 @@
     "build": "tsup",
     "dep": "taze major",
     "npm:login": "pnpm login --registry https://registry.npmjs.com",
-    "npm:publish": "pnpm publish --registry https://registry.npmjs.com"
+    "npm:publish": "pnpm publish --registry https://registry.npmjs.com",
+    "jsr:prepublish": "jsr publish --dry-run --allow-slow-types",
+    "jsr:publish": "jsr publish --allow-slow-types"
   },
   "license": "MIT",
   "homepage": "https://github.com/Vincent-the-gamer/lolkitten#readme",
@@ -51,6 +53,7 @@
   "sideEffects": false,
   "devDependencies": {
     "@types/node": "^22.9.3",
+    "jsr": "^0.13.2",
     "taze": "^0.18.0",
     "tsup": "^8.3.5",
     "tsx": "^4.19.2",

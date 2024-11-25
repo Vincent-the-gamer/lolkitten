@@ -14,13 +14,16 @@ Inspired by [busyloop/lolcat](https://github.com/busyloop/lolcat)
 
 ## Installation
 
-### npm
+### From `npm`
+
+> [!NOTE]
+> Waiting for release.
 
 ```shell
 npm i lolkitten -g
 ```
 
-### jsr
+### From `jsr`
 Soon.
 
 ## Preview
