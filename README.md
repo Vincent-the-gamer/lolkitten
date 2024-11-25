@@ -24,7 +24,7 @@ Soon. Trying to release a CLI package on jsr.
 lolkitten -h
 
 # Or through pipe
-neofetch | lolkitten
+echo "hello world!" | lolkitten
 ```
 
 ## Preview
