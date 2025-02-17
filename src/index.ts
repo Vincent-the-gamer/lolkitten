@@ -3,6 +3,11 @@ import ansi from 'ansi'
 import chalk from 'chalk'
 // @ts-expect-error missing types
 import Reader from 'line-by-line'
+import util from "node:util"
+
+function removeAnsi(text: string): string {
+  return util.stripVTControlCharacters(text)
+}
 
 const cursor = ansi(process.stdout)
 
@@ -43,13 +48,14 @@ function colorize(char: string, colors: Record<string, any>) {
   process.stdout.write(chalk.rgb(colors.red, colors.green, colors.blue)(char))
 }
 
-function printlnPlain(colorize: Function, line: string[]) {
-  for (let i = 0; i < line.length; i++) {
-    colorize(line[i], rainbow(options.freq, options.seed + i / options.spread))
+function printlnPlain(colorize: Function, line: string) {
+  const escapedLine: string[] = removeAnsi(line).split('')
+  for (let i = 0; i < escapedLine.length; i++) {
+    colorize(escapedLine[i], rainbow(options.freq, options.seed + i / options.spread))
   }
 }
 
-function printlnAnimated(colorize: Function, line: string[]) {
+function printlnAnimated(colorize: Function, line: string) {
   if (sleep) {
     // Backup the seed
     const seed = options.seed

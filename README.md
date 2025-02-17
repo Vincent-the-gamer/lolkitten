@@ -10,14 +10,9 @@ Inspired by [busyloop/lolcat](https://github.com/busyloop/lolcat)
 
 ## Installation
 
-### From `npm`
-
 ```shell
 npm i @vincent-the-gamer/lolkitten -g
 ```
-
-### From `jsr`
-Soon. Trying to release a CLI package on jsr.
 
 ## Usage
 ```shell

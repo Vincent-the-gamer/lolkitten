@@ -40,9 +40,7 @@
     "dep": "taze major",
     "lint:fix": "eslint src --fix",
     "npm:login": "pnpm login --registry https://registry.npmjs.com",
-    "npm:publish": "pnpm publish --registry https://registry.npmjs.com",
-    "jsr:prepublish": "jsr publish --dry-run --allow-slow-types --allow-dirty",
-    "jsr:publish": "jsr publish --allow-slow-types"
+    "npm:publish": "pnpm publish --registry https://registry.npmjs.com"
   },
   "license": "MIT",
   "homepage": "https://github.com/Vincent-the-gamer/lolkitten#readme",
@@ -59,23 +57,30 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "@antfu/eslint-config": "^3.9.2",
-    "@types/node": "^22.9.3",
-    "eslint": "^9.15.0",
-    "jsr": "^0.13.2",
-    "taze": "^0.18.0",
-    "tsup": "^8.3.5",
+    "@antfu/eslint-config": "^4.2.1",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "taze": "^18.5.0",
+    "tsup": "^8.3.6",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "ansi": "^0.3.1",
-    "chalk": "^5.3.0",
+    "chalk": "^5.4.1",
     "line-by-line": "^0.1.6",
     "minimist": "^1.2.8",
     "supports-color": "7.1.0"
   },
   "optionalDependencies": {
     "sleep": "^6.3.0"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "sleep"
+    ]
   }
 }
