@@ -1,0 +1,8 @@
+[package]
+name = "lolkitten"
+description = "🌈 A lightweight and fast the-rainbow-cat-inspired text colorizer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
