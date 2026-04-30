@@ -6,6 +6,10 @@
 
 🌈 A lightweight and fast the-rainbow-cat-inspired text colorizer.
 
+## Example
+
+![example](.github/example.png)
+
 ## ✨ Features
 
 - **Rainbow Gradient Effect** - Automatically applies smooth rainbow color transitions across your text
