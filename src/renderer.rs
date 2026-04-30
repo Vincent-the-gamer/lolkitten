@@ -1,6 +1,6 @@
 use crate::color::hsl_to_rgb;
 
-/// 给普通文本字节染色（假设为 ASCII）
+/// 给普通文本字节染色（支持 UTF-8）
 pub fn colorize_text(bytes: &[u8], hue: f64) -> Vec<u8> {
     let (r, g, b) = hsl_to_rgb(hue, 1.0, 0.5);
 
@@ -19,7 +19,7 @@ pub fn colorize_text(bytes: &[u8], hue: f64) -> Vec<u8> {
     output.extend_from_slice(&b_str);
     output.extend_from_slice(b"m");
 
-    // 添加文本
+    // 添加文本（保持 UTF-8 编码完整）
     output.extend_from_slice(bytes);
 
     // 重置颜色
