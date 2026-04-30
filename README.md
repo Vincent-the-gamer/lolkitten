@@ -1,6 +1,6 @@
 <div align="center">
     <img src=".github/lolkitten.png" style="height: 80px;"/>
-    <p>lolkitten</p>
+    <h1>lolkitten</h1>
     <p><i>Rustified lolcat</i></p>
 </div>
 
@@ -19,7 +19,12 @@
 
 ### From Release
 
-Download from GitHub Release
+Download from [GitHub Release](https://github.com/Vincent-the-gamer/lolkitten/releases)
+
+Then:
+
+1. Add it to PATH
+2. Have fun!
 
 ### From Source
 
