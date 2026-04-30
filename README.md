@@ -1,7 +1,7 @@
 <div align="center">
     <img src=".github/lolkitten.png" style="height: 80px;"/>
     <h1>lolkitten</h1>
-    <p><i>Rustified lolcat</i></p>
+    <p><i><b>Rustified</b> lolcat</i></p>
 </div>
 
 🌈 A lightweight and fast the-rainbow-cat-inspired text colorizer.
@@ -71,6 +71,6 @@ ps aux | lolkitten
 history | lolkitten
 ```
 
-# License
+## License
 
 [MIT License | Vincent-the-gamer | @2026-PRESENT](./LICENSE)
