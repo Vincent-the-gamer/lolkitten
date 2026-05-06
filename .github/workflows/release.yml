@@ -5,6 +5,9 @@ on:
     branches:
       - release
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   extract-version:
     runs-on: ubuntu-latest
