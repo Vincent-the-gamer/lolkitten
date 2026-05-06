@@ -14,7 +14,7 @@ jobs:
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
       - name: Extract version from Cargo.toml
         id: version
         run: |
@@ -31,26 +31,32 @@ jobs:
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             artifact_name: lolkitten.exe
+            arch_name: x86_64-windows
           - os: windows-latest
             target: aarch64-pc-windows-msvc
             artifact_name: lolkitten.exe
+            arch_name: aarch64-windows
           - os: ubuntu-latest
             target: x86_64-unknown-linux-gnu
             artifact_name: lolkitten
+            arch_name: x86_64-linux
           - os: ubuntu-latest
             target: aarch64-unknown-linux-gnu
             artifact_name: lolkitten
+            arch_name: aarch64-linux
           - os: macos-latest
             target: x86_64-apple-darwin
             artifact_name: lolkitten
+            arch_name: x86_64-macos
           - os: macos-latest
             target: aarch64-apple-darwin
             artifact_name: lolkitten
+            arch_name: aarch64-macos
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -76,16 +82,21 @@ jobs:
         shell: bash
         run: |
           mkdir -p release
-          cp target/${{ matrix.target }}/release/${{ matrix.artifact_name }} release/
-          if [ "${{ runner.os }}" != "Windows" ]; then
-            chmod +x release/${{ matrix.artifact_name }}
+          VERSION="${{ needs.extract-version.outputs.version }}"
+          ARCH_NAME="${{ matrix.arch_name }}"
+
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            cp target/${{ matrix.target }}/release/${{ matrix.artifact_name }} release/lolkitten-${VERSION}-${ARCH_NAME}.exe
+          else
+            cp target/${{ matrix.target }}/release/${{ matrix.artifact_name }} release/lolkitten-${VERSION}-${ARCH_NAME}
+            chmod +x release/lolkitten-${VERSION}-${ARCH_NAME}
           fi
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: lolkitten-${{ matrix.target }}
-          path: release/${{ matrix.artifact_name }}
+          path: release/*
 
   release:
     needs: [extract-version, build]
@@ -93,10 +104,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
 
       - name: Download all artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7.0.0
         with:
           path: artifacts
 
